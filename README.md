@@ -23,6 +23,20 @@ This library provides bindings to the Mecab library for tokenzing japanese Text.
 
 ```crystal
 require "crystal-mecab"
+
+CrystalMecab.tokenize_japanese("mecabは速くプログラムするし使いやすいしすごいソフトウェアですよ！").each do |t|
+  puts t.to_s
+end
+#outputs
+#
+#
+#
+#
+#
+#
+#
+#
+#
 ```
 
 As of v0.1.0 the only available functionality is to tokenize Japanese text

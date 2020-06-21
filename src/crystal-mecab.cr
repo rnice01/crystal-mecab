@@ -7,7 +7,8 @@ module CrystalMecab
   VERSION = "0.1.0"
 
   def self.tokenize_japanese(text : String) : Array(CrystalMecab::JapaneseToken)
-    curr_node = LibMecab.to_node(text.to_unsafe)
+    input = text.to_unsafe
+    curr_node = LibMecab.to_node(input)
     tokens = Array(CrystalMecab::JapaneseToken).new
 
     while curr_node
